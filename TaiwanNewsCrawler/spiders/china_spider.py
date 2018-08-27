@@ -1,10 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """
 中國時報
 the crawl deal with chinatimes's news
 Usage: scrapy crawl china -o <filename.json>
 """
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 from datetime import datetime
 import scrapy
 

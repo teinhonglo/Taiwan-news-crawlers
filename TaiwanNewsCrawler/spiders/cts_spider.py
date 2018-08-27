@@ -1,10 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """
 華視
 the crawl deal with cts's news
 Usage: scrapy crawl cts -o <filename.json>
 """
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 from datetime import date
 from datetime import timedelta
 import scrapy

@@ -1,10 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """
 三立新聞
 the crawl deal with setn's news
 Usage: scrapy crawl setn -o <filename.json> -s DOWNLOAD_DELAY=0.1
 """
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 import re
 from datetime import date
 from datetime import timedelta

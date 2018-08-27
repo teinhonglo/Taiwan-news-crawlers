@@ -1,10 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """
 自由時報即時新聞
 the crawl deal with liberty's realtime news
 Usage: scrapy crawl libertyRealtime -o <filename.json>
 """
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 import re
 from datetime import datetime, date
 import scrapy

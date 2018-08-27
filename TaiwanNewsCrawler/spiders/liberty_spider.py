@@ -1,10 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """
 自由時報
 the crawl deal with liberty's news
 Usage: scrapy crawl liberty -o <filename.json>
 """
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 import time
 import re
 import scrapy

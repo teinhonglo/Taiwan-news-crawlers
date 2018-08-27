@@ -1,10 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """
 TVBS
 the crawl deal with tvbs's news
 Usage: scrapy crawl tvbs -o <filename.json>
 """
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 import re
 from datetime import date
 from datetime import timedelta

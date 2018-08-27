@@ -1,10 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """
 自由時報tag
 the crawl deal with tags of liberty's news, which could make the dictionary of jieba
 Usage: scrapy crawl liberty_tag -o <filename.json>
 """
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 import re
 import datetime
 import scrapy

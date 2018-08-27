@@ -1,10 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """
 公視新聞
 the crawl deal with pts's news
 Usage: scrapy crawl pts -o <filename.json>
 """
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 import json
 import time
 
@@ -34,8 +34,8 @@ class EttodaySpider(scrapy.Spider):
             category = news_item.css(
                 '.list-news-program::text').extract_first()
 
-            if TODAY in date_time:
-                yield {
+            #if TODAY in date_time:
+            yield {
                     'website': '公視',
                     'url': url,
                     'title': title,

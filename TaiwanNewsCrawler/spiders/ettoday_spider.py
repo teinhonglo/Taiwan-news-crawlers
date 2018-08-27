@@ -1,9 +1,9 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """
 the crawl deal with ettoday's news
 Usage: scrapy crawl ettoday -o <filename.json>
 """
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 import time
 import scrapy
 

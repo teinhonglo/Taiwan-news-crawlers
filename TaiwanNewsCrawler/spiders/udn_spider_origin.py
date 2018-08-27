@@ -10,41 +10,33 @@ from datetime import timedelta
 import scrapy
 
 TODAY_STR = datetime.now().strftime('%m-%d')
-#THIS_YEAR = datetime.now().year
-MAX_news = 10000000
+
 
 class UdnSpider(scrapy.Spider):
-    name = "udn"
+    name = "udn_origin"
 
     def start_requests(self):
-        urls = ['https://udn.com/news/breaknews/1']
-        for url in urls:
-            meta = {'iter_time': 1}
-            yield scrapy.Request(url, callback=self.parse, meta=meta)
+        url = 'https://udn.com/news/breaknews/1'
+        meta = {'iter_time': 1}
+        yield scrapy.Request(url, callback=self.parse, meta=meta)
 
     def parse(self, response):
         has_next_page = True
-        num_news = 0
         is_first_iter = response.meta['iter_time'] == 1
         response.meta['iter_time'] += 1
         el_selector = '#breaknews_body dt' if is_first_iter else 'dt'
         target = response.css(el_selector)
         if not target:
             has_next_page = False
-        
         for news in target:
             url = news.css('a::attr(href)').extract_first()
             url = response.urljoin(url)
             date_time = news.css('.info .dt::text').extract_first()
-            
+
             if TODAY_STR not in date_time:
                 has_next_page = False
                 break
-           
-           #if num_news > MAX_news:
-           #     has_next_page = False
-           #     break
-            num_news += 1
+
             yield scrapy.Request(url, callback=self.parse_news)
 
         if has_next_page:

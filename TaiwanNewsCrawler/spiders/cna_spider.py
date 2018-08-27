@@ -1,10 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """
 中央社
 the crawl deal with cna's news
 Usage: scrapy crawl cna -o <filename.json>
 """
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 from datetime import datetime
 import scrapy
 

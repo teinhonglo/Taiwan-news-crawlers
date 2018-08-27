@@ -1,10 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """
 Ettoday tag
 the crawl deal with tags of ettoday's news, which could make the dictionary of jieba
 Usage: scrapy crawl ettoday_tag -o <filename.json>
 """
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 import datetime
 import scrapy
 

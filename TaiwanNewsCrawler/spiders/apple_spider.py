@@ -1,10 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """
 蘋果日報新聞
 the crawl deal with apple's news
 Usage: scrapy crawl apple -o <filename.json>
 """
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 
 import re
 import time
